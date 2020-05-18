@@ -4,14 +4,11 @@ from numpy import polyfit
 from matplotlib import pyplot as plt
 from matplotlib.pyplot import figure
 
-print('done')
-
-#get corona
+#Get Corona Dataset
 corona = pd.read_csv('CoronaVirus.csv')
 
 date=corona['Order']
 new_cases=corona['New cases']
-
 
 x=np.array(date)
 y= np.array(new_cases)
@@ -34,12 +31,3 @@ plt.show()
 # figure(num=None, figsize=(8, 6), dpi=80, facecolor='w', edgecolor='k')
 print(round(m*36+b))
 print(round(m),round(b))
-
-
-
-pip install numpy
-	#For More Info :https://numpy.org/doc/
-pip install pandas
-	#For More Info :https://pandas.pydata.org/docs/
-pip install matplotlib
-	#For More Info :https://matplotlib.org/3.2.1/contents.html
